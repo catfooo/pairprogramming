@@ -1,6 +1,13 @@
 fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
     .then(
-        (json) =>
-          (document.getElementById("restaurantList").innerHTML += json.length)
+        (json) => {
+            const posts = json;
+            posts.forEach((post, index) => {
+                const newRestaurantElement = `<section class="restaurant">Restaurant #${index}: ${post.title}</section>`
+                document.getElementById(
+                    'restaurantList'
+                ).innerHTML += newRestaurantElement;
+            });
+        }
     );
