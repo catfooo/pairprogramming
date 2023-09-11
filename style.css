@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.restaurant-list {
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    padding: 20px;
+    width: 400px;
+}
